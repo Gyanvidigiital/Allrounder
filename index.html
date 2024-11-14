@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Rounder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #5c5650;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .promo-container {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+      height: 600px;
+      
+    }
+    .promo-container h1, .promo-container h2, .timer, .offer-box, .footer {
+      color: white;
+    }
+    .promo-container h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .promo-container h2 {
+      font-size: 1.4em;
+      margin: 5px 0;
+    }
+    .timer {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+    .offer-box {
+      background-color: gray;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-size: 1em;
+    }
+    .offer-box .icon {
+      color: white;
+      font-weight: bold;
+    }
+    .subscribe-btn {
+      display: block;
+      background-color: #1e78e6;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 10px 0;
+      animation-name: xyz;
+      animation-duration: 1s;
+      animation-iteration-count:infinite ;
+       animation-direction:alternate-reverse;
+
+    }    
+    @keyframes xyz
+            {
+                from
+                {
+                      background-color: navy;
+                      /*transform: rotate(0deg);*/
+                      box-shadow: 0px 0px 30px 10px rgba(255, 255, 255,.9);
+                }
+                  to
+                  {
+                    background-color: lightgreen;
+                   /* transform: rotate(45deg);*/
+                   box-shadow: 0px 0px 0px 15px rgba(255, 255, 255,.8),0px 0px 0px 30px
+                   rgba(255, 255, 255e,.6) ,0px 0px 0px 45px
+                   rgba(255, 255, 255,.4),0px 0px 0px 60px;
+                
+                  }
+            }
+            
+    .footer {
+      font-size: 1.1em;
+      color: #d4d4d4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="promo-container">
+    <div class="image">
+      <img src="bg.jpeg" alt="" height="100px" width="100px" style="border-radius: 50%;">
+    </div>
+    <h1>🏏 All - Rounder 🏏</h1>
+    
+    <h2>Cricket No 1 Analyst</h2>
+    <br/>
+    <p class="timer">FREE JOINING ENDS IN... <span id="countdown">43</span></p>
+    <br/>
+    <div class="offer-box">
+      <p><span class="icon">⚡</span><b>24/26 MATCH PASS </b><span class="icon">⚡</span></p>
+      <p><span class="icon">✔️</span><b> IPL ALL MATCH PASS ✔️</b></p>
+    </div>
+       <br/>
+    <a href="https://t.me/+P_XGfExRL4dmZmNl" class="subscribe-btn" onclick="subscribeAlert(); return false;">
+      SUBSCRIBE NOW FOR FREE
+    </a>
+     <br/>
+    <p class="footer">🥳 Love To Watch Cricket Matches🥳</p>
+  </div>
+
+  <script>
+    // Countdown timer script
+    let countdown = 43;
+    const countdownElem = document.getElementById('countdown');
+    setInterval(() => {
+      if (countdown > 0) {
+        countdown--;
+        countdownElem.textContent = countdown;
+      }
+    }, 1000);
+
+    // Alert function for the subscribe button
+    function subscribeAlert() {
+      alert("Subscribed successfully!");
+    }
+  </script>
+
+</body>
+</html>
